@@ -1,15 +1,16 @@
 /*
 *
-*  z.JS - a Javascript library by cdmontez
+*  z.JS - a JavaScript library by cdmontez
 *  https://github.com/cdmontez
 *
 */
 
+"use strict";
 var z = {};
 
 z.help = function () {
-  document.write('You can access the zTools documentation here: https://github.com/cdmontez/zTools')
-}
+  console.log('You can access the zTools documentation here: https://github.com/cdmontez/zTools');
+};
 
 z.create = function (ELEMENT, CLASSNAME) {
   let element = document.createElement(ELEMENT);
@@ -22,12 +23,12 @@ z.create = function (ELEMENT, CLASSNAME) {
 z.style = function (ELEMENT, STYLES) {
   for (let STYLE in STYLES) {
     ELEMENT.style[STYLE] = STYLES[STYLE];
-  }
-}
+  };
+};
 
 z.codeBlock = function (CLASSNAME) {
   let pre = document.createElement('pre');
   let code = document.createElement('code');
   pre.appendChild(code);
   return code;
-}
+};
